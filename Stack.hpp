@@ -25,6 +25,10 @@ public:
     Type top(){
         return top_->Value;
     }
+    ~Stack(){
+        delete head_;
+        delete top_;
+    }
 private:
     LinkedList<Type>* head_;
     LinkedList<Type>* top_;

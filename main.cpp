@@ -1,19 +1,10 @@
-
 #include <iostream>
-#include "Stack.hpp"
-int main(){
-    Stack<int> stack;
-    stack.push(13);
-    stack.push(12);
-    std::cout << stack.top() << std::endl;
-    stack.push(16);
-    std::cout << stack.top() << std::endl;
-    stack.pop();
-    std::cout << stack.top() << std::endl;
-stack.pop();
-    std::cout << stack.top() << std::endl;
-    stack.pop();
-    std::cout << stack.top() << std::endl;
-    stack.pop();
-    std::cout << stack.top() << std::endl;
+#include <string>
+#include "Hashmap.hpp"
+int main() {
+
+    HashMap<std::string,std::string> myMap;
+    myMap["bloop"] = "hi!";
+    std::cout << myMap["bloop"];
+    return 0;
 }
