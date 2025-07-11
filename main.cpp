@@ -1,19 +1,19 @@
-#include <utility>
-#include <bitset>
+
 #include <iostream>
-#include "LinkedList.hpp"
+#include "Stack.hpp"
 int main(){
-    LinkedList<int>* last = new LinkedList<int>(0);
-    LinkedList<int>* head = last;
-    for (int i=1;i<23;i++){
-        LinkedList<int>* newL = new LinkedList<int>(i);
-        last->Next = newL;
-        last = newL;
-    }
-    LinkedList<int>* current = head;
-    
-    while(current->Next != nullptr){
-        std::cout << current->Value << std::endl;
-        current = current->Next;
-    }
+    Stack<int> stack;
+    stack.push(13);
+    stack.push(12);
+    std::cout << stack.top() << std::endl;
+    stack.push(16);
+    std::cout << stack.top() << std::endl;
+    stack.pop();
+    std::cout << stack.top() << std::endl;
+stack.pop();
+    std::cout << stack.top() << std::endl;
+    stack.pop();
+    std::cout << stack.top() << std::endl;
+    stack.pop();
+    std::cout << stack.top() << std::endl;
 }
