@@ -1,10 +1,13 @@
 #include <iostream>
-#include <string>
-#include "Hashmap.hpp"
+#include "../Algorithms/BubbleSort.hpp"
 int main() {
+    int arr[] = {5, 2, 8, 1, 3};
+    size_t n = sizeof(arr) / sizeof(arr[0]);
 
-    HashMap<std::string,std::string> myMap;
-    myMap["bloop"] = "hi!";
-    std::cout << myMap["bloop"];
-    return 0;
+    BubbleSort(arr, arr + n);
+
+    for (size_t i = 0; i < n; ++i) {
+        std::cout << arr[i] << " ";
+    }
+    // Output: 1 2 3 5 8
 }
