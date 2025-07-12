@@ -26,4 +26,4 @@ class Queue{
         LinkedList<Type>* last_;
 
 
-}
+};
